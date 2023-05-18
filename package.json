@@ -1,0 +1,40 @@
+{
+  "name": "pchain-types-js",
+  "version": "4.0.0",
+  "description": "ParallelChain protocol types implementation written in typescript",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "dev": "nodemon src/dev.js",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "parallelchain",
+    "protocol-types",
+    "xpll",
+    "pchain"
+  ],
+  "author": "ParallelChain Lab",
+  "license": "ISC",
+  "homepage": "https://github.com/parallelchain-io/parallelchain-protocol/",
+  "dependencies": {
+    "@noble/ed25519": "^1.7.1",
+    "@types/bn.js": "^5.1.1",
+    "base64url": "^3.0.1",
+    "borsh": "^0.7.0",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.1",
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.19",
+    "ts-jest": "^28.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0"
+  }
+}
