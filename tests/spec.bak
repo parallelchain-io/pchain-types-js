@@ -1,0 +1,47 @@
+ //
+  // TODO keep or not
+  //
+  // it("should deserialize blocks correctly, many blocks", async () => {
+  //   let reader = new BinaryReader(
+  //     Buffer.from(
+  //       "AQAAAC40ab/crRyXlDhwNRZL6t1XsppBMhIrCCFcFEO8baKj/1sJAAAAAAAAAAAAAAAAAGpdCQAAAAAA0sehryWnugV1Bq+9apcPBCbnpOvI/x7FH/a9OmNPzX0ACgAAAAEpsJLL4+gFxyYIo1qnoWVLbu2YG4eYk2cRpw1xHwk4DhtLvojTusjpSpgThK4BYYQtOHOy2aYjoJChIaUU1boKAVjdjO0ImEa3H8COA156rfMBEc/zjD3J7e6RoktamNj7Cvl93sRRe6BP4Ac0Jk6HNernFa9mVYcbnTxU0DfjoAcBCwKgZxge1l2D4F+JIqt5oJ8YXrsPSFh2xWJzIzGDcgIsBo7R1drHtMbPIscwDuEk+hKJKPoe0S1ds+H2vVMiBgETK2VTcm32Le5lKqTtOXtiPabeEz9viAz7jJPOsCe0EkJxw83PyNYGBiVbzXRGwcf8Pr/8R8zQSkn9qW5qjuMPAVvqkHlnvLs2WDjcYxu1VvRAgY6U6Gjnxb8bCkp5SSEnf9uS9R5pTViYh9icUEBH2wMitJwFir+SgA58a4vRbQsBLxapUBSFPGtbRtT++bJMSjNCdN7lGKNzcLT0x6WP5W5i3gymZt0MHQdjrd1lWrCMC0TYc+Y9YDA1U0XX7EcHAQFsclk4Bioas/llDgzYwCjWogc+YEP9rBQdVKpUMa/6QW37BV7znsVVHZGMTyxEirqr6Dw+nRJhLm9Mi/kJjJoBAAHwWur0m5g3MSQmq+6MdSbNqpO2q4NLmdXV40Q0dnzsJCqels+wJg2cJCUIDBbxvStzhUcV3qs05IqK7G120hkGAalbLCnAhYBmsfIbrxZFudnYA5FJZDX1LpiNp3aTZ6QmP2rqEt2R2TFGCWO1EMNXHvJDWChFQzaoxneY+ANp0gl6WVtktGtK+h2z61KQ10XuuUR9GAoIRgLiTrcyPLehNQAAAAAAAAAA/G2mANINJZUIdukS6B3zZ43st9HDe3HjShgJOUNMiAfdx3ZkCAAAAAAAAABZ3hoAAAAAAEXR5tZXjksumWEsiS2xAblksja+TfuguPXdobINvno/l8aWUrK7RkDeNLQ8vF/Mf0ZbX63oqRX8HohthKjrISzrA3a4azrzFbThldE6ovab3haMU7Sw6Q2NxHSLpQ9wRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQsZvMx8azXt06dDrLHVk6NFpzFdUOHNOQo6fcxghts8DAAAAAAAAAAEAAAAC8sSbynPFBh2mch6qlAQrjqv29a12EO3ju5J+Kw27vf8VAAAAY2xhaW1fdW5sb2NrZWRfdG9rZW5zAQEAAAAIAAAAQrUPYAcAAAABAAAAAAAAAADAxi0AAAAAAAgAAAAAAAAAAAAAAAAAAAAs0DQnDzYXTYA/riB1tgUUKy80fyXPduyVRbVbAmkUwh6XoMRtvPcdVif7n82aJnW/8I+0db8rk73H0n7Ac98GsjpUJqFkwdEgziLGPJ4aD6Q5Y06SWUMBFSd+WuVWOmUBAAAAAQAAAACl0BgAAAAAAAAAAAAAAAAA", 'base64'
+  //     )
+  //   );
+  //   let blocks = [] as Block[];
+  //   // Vec::<pchain_types::Block>
+  //   reader.readArray(() => {
+  //     console.log("Offset", reader.offset) // 4bytes, which is u32 of value 1
+  //     const buf_item = reader.buf.slice(
+  //       reader.offset,
+  //       reader.offset + reader.buf.length
+  //     );
+  //     console.log(Buffer.from(buf_item).toString('base64'))
+  //     let block = Block.deserialize(Buffer.from(buf_item)) as Block;
+  //     reader.offset += block.serialize().length;
+  //     blocks.push(block);
+  //   });
+  //   expect(blocks.length).to.eql(1);
+  // });
+  //
+  // TODO decided whether to keep this?
+  //
+  //   it("should deserialize blocks correctly, many blocks", async () => {
+  //     let reader = new BinaryReader(
+  //       Buffer.from(
+  //         "AQAAAOXxlS7Q7JBM6ix-wx9cZ6U2qdbMOBpQU_Nel7ptoDhIkQYAAAAAAAAAAAAAAAAAAJwGAAAAAAAAWnLO47P5dKOe-mW0fXtpH5eP-FdHOIAjLrvm860i6hMABAAAAAHvTN6jjttH6JENaswXWmNgYTQFAEMgWrpEKdO2KTj4PkeUT85TOmem78KkBRPnluL2x1qWrO7ZublqDdPsB6oJAVbl_cdtfxzVXR_JTqkaOIv8O9FprTWetWFC8BGHjCJryUAL0d4DLXu6uBTeu59baOV6auTPK1xByDOkbCvzRQkAAYK_jBvYUSGlaTftrbUYKG0x1gwoD4FSM-KEsDG84NfjSwStjtoLqnlbsEcwAmtXDEWKa4ynr3VcEwy5k3WK7wjhW_rtuWsfOXCmvISjTVFBYIWn8c-f_vKAD9Fk6HAn3AAAAAAAAAAAk9LhEzdX7SxssikrwNFMGiRfj4ugM3u3LNJvE0MY63WEe3VkCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADbdiMxZAr3Yur2h_qfE4ZVVTJjtdNg1kX_IsD94N4IngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", 'base64'
+  //       )
+  //     );
+  //     let blocks = [] as Block[];
+  //     // Vec::<pchain_types::Block>
+  //     reader.readArray(() => {
+  //       console.log("Off", reader.offset) // 4bytes, which is u32 of value 1
+  //       const buf_item = reader.buf.slice(
+  //         reader.offset,
+  //         reader.offset + reader.buf.length
+  //       );
+  //       let block = Block.deserialize(Buffer.from(buf_item)) as Block;
+  //       reader.offset += block.serialize().length;
+  //       blocks.push(block);
+  //     });
+  //     expect(blocks.length).to.eql(1);
+  //   });
